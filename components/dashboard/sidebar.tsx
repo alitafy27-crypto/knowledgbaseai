@@ -48,7 +48,7 @@ export default function Sidebar() {
                   className={`flex h-7 w-7 items-center justify-center rounded-lg text-xs ${
                     active
                       ? "bg-violet-100 text-violet-600"
-                      : "bg-gray-100 text-slate-500 group-hover:text-slate-700" // تم تعتيم الأيقونات قليلاً لتكون واضحة
+                      : "bg-gray-100 text-slate-500 group-hover:text-slate-700"
                   }`}
                 >
                   {item.icon}
@@ -79,8 +79,9 @@ export default function Sidebar() {
               <div className="h-full w-[16%] rounded-full bg-gradient-to-r from-violet-500 to-cyan-400" />
             </div>
           </div>
+          {/* تم تغيير الرابط هنا من /pricing إلى # لكي لا يكسر الموقع */}
           <Link
-            href="/pricing"
+            href="#"
             className="mt-4 flex h-9 items-center justify-center rounded-lg bg-gray-200 text-xs font-semibold text-slate-700 transition hover:bg-violet-100 hover:text-violet-700"
           >
             Upgrade Plan
