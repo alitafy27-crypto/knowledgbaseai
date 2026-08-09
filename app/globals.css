@@ -1,0 +1,382 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;     /* أبيض رمادي ناعم جداً */
+  --foreground: #0f172a;     /* نصوص داكنة (Slate 900) */
+  --muted: #64748b;          /* نصوص فرعية رمادية (Slate 500) */
+  --primary: #f59e0b;        /* ذهبي (Amber 500) */
+  --primary-dark: #d97706;   /* ذهبي داكن (Amber 600) */
+  --border-light: rgba(0, 0, 0, 0.05);      /* حدود خفيفة جداً */
+  --border-hover: rgba(245, 158, 11, 0.3);  /* حدود ذهبية عند التمرير */
+  --card-bg: #ffffff;        /* خلفية البطاقات بيضاء صافية */
+  --glass-bg: rgba(255, 255, 255, 0.7);     /* شفافية بيضاء للزجاج */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================================
+   GLOBAL CONTAINER
+================================ */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* ================================
+   SECTIONS
+================================ */
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+.section-padding {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+/* ================================
+   GLASS (الزجاج)
+================================ */
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+/* ================================
+   CARDS
+================================ */
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* ================================
+   GRADIENT TEXT (النص المتدرج)
+================================ */
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    #fbbf24 0%,    /* Amber 400 */
+    #f59e0b 50%,   /* Amber 500 */
+    #d97706 100%   /* Amber 600 */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff; /* النص أصبح أبيض ليتناسب مع الخلفية البيضاء */
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
+  color: var(--foreground);
+  font-weight: 600;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.04);
+  border-color: var(--border-hover);
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar-shell {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  z-index: 100;
+  width: calc(100% - 32px);
+  max-width: 1180px;
+  transform: translateX(-50%);
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero-section {
+  min-height: 850px;
+  display: flex;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 70px;
+}
+
+@media (max-width: 1023px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 140px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-section {
+    padding-top: 120px;
+    padding-bottom: 70px;
+  }
+}
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+.section-heading {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.section-heading p {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ================================
+   FEATURE GRID
+================================ */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   WORKFLOW GRID
+================================ */
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .workflow-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   PRICING
+================================ */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ================================
+   FAQ
+================================ */
+
+.faq-list {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================================
+   CTA
+================================ */
+
+.cta-box {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 28px;
+  padding: 70px 50px;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.2), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.15), transparent 50%),
+    #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 640px) {
+  .cta-box {
+    padding: 50px 24px;
+    border-radius: 22px;
+  }
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  width: 100%;
+}
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ================================
+   SELECTION
+================================ */
+
+::selection {
+  background: rgba(245, 158, 11, 0.3);
+  color: var(--foreground);
+}
