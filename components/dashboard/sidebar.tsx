@@ -18,9 +18,12 @@ export default function Sidebar() {
       {/* Logo */}
       <div className="flex h-[72px] items-center border-b border-gray-200 px-5">
         <Link href="/dashboard" className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-cyan-400 text-sm font-bold text-white shadow-lg shadow-violet-500/20">
-            ✦
-          </div>
+          {/* تم استبدال الأيقونة القديمة بالشعار الجديد */}
+          <img 
+            src="/logo.png" 
+            alt="knowledgbaseai Logo" 
+            className="h-10 w-10 object-contain" 
+          />
           <div>
             <div className="text-sm font-bold text-slate-900">knowledgbaseai</div>
             <div className="text-[10px] text-slate-500">Knowledge Platform</div>
@@ -79,7 +82,6 @@ export default function Sidebar() {
               <div className="h-full w-[16%] rounded-full bg-gradient-to-r from-violet-500 to-cyan-400" />
             </div>
           </div>
-          {/* تم تغيير الرابط هنا من /pricing إلى # لكي لا يكسر الموقع */}
           <Link
             href="#"
             className="mt-4 flex h-9 items-center justify-center rounded-lg bg-gray-200 text-xs font-semibold text-slate-700 transition hover:bg-violet-100 hover:text-violet-700"
