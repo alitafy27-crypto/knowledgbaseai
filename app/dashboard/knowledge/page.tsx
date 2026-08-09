@@ -306,7 +306,7 @@ export default function KnowledgePage() {
                 </div>
 
                 <span className="text-sm font-medium text-violet-600">
-                  your saas Platform
+                  knowledgbaseai Platform
                 </span>
               </div>
 

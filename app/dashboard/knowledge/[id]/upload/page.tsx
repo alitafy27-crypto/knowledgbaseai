@@ -151,7 +151,7 @@ export default function UploadDocumentsPage() {
               <BrainCircuit className="h-6 w-6 text-white" />
             </div>
             <div>
-              <p className="text-sm font-medium text-violet-300">your saas Platform</p>
+              <p className="text-sm font-medium text-violet-300">knowledgbaseai Platform</p>
               <h1 className="mt-1 text-3xl font-bold tracking-tight sm:text-4xl">Upload Documents</h1>
             </div>
           </div>

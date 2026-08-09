@@ -148,7 +148,7 @@ export default function LoginPage() {
 
             <div>
               <div className="text-left text-lg font-bold tracking-tight">
-                your saas
+                knowledgbaseai
               </div>
 
               <div className="text-left text-xs text-slate-500">

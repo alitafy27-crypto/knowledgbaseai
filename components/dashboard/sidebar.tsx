@@ -22,7 +22,7 @@ export default function Sidebar() {
             ✦
           </div>
           <div>
-            <div className="text-sm font-bold text-slate-900">your saas</div>
+            <div className="text-sm font-bold text-slate-900">knowledgbaseai</div>
             <div className="text-[10px] text-slate-500">Knowledge Platform</div>
           </div>
         </Link>
