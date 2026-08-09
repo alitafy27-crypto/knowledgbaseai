@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// استيراد مكون Script من Next.js
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -33,11 +32,10 @@ export default function RootLayout({
         {children}
 
         {/* 
-          تم إضافة كود Google Analytics هنا باستخدام مكون Script الخاص بـ Next.js.
-          هذا يضمن تحميل الكود بكفاءة عالية دون التأثير على سرعة الموقع.
+          تم تحديث كود Google Analytics بالكود الجديد G-PKT2BJEPDE 
         */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-KZ6ZDW8SVR"
+          src="https://www.googletagmanager.com/gtag/js?id=G-PKT2BJEPDE"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -45,7 +43,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-KZ6ZDW8SVR');
+            gtag('config', 'G-PKT2BJEPDE');
           `}
         </Script>
       </body>
