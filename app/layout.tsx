@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import Script from "next/script";
+
+import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-PKT2BJEPDE";
 
 export const metadata: Metadata = {
   title: {
     default: "RAGFlow AI",
     template: "%s | RAGFlow AI",
   },
+
   description:
     "Enterprise AI Knowledge Base powered by OpenAI, LangChain and Vector Databases.",
+
   keywords: [
     "AI",
     "RAG",
@@ -26,24 +31,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
-        <div className="hero-bg" />
         {children}
 
-        {/* 
-          تم تحديث كود Google Analytics بالكود الجديد G-PKT2BJEPDE 
-        */}
+        {/* Google Analytics */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-PKT2BJEPDE"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
+
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-PKT2BJEPDE');
+            gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
       </body>
