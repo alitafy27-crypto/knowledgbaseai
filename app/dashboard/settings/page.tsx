@@ -20,7 +20,7 @@ type SettingsTab = "profile" | "notifications" | "security" | "billing";
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<SettingsTab>("profile");
 
-  const [fullName, setFullName] = useState("knowledgbaseai User");
+  const [fullName, setFullName] = useState("knowledg-base-ai User");
   const [company, setCompany] = useState("My Company");
   const [email, setEmail] = useState("you@example.com");
 
@@ -402,7 +402,7 @@ function NotificationsSettings() {
   return (
     <SettingsPanel
       title="Notifications"
-      description="Control how knowledgbaseai keeps you informed."
+      description="Control how knowledg-base-ai keeps you informed."
     >
       <ToggleRow
         title="Email Notifications"
@@ -497,7 +497,7 @@ function BillingSettings() {
   return (
     <SettingsPanel
       title="Billing & Subscription"
-      description="Manage your knowledgbaseai plan and payments."
+      description="Manage your knowledg-base-ai plan and payments."
     >
       <div className="rounded-xl border border-violet-200 bg-gradient-to-br from-violet-50 to-cyan-50 p-6">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">

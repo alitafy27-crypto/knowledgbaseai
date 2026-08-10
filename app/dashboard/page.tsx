@@ -77,7 +77,7 @@ export default function DashboardPage() {
             </div>
 
             <span className="text-sm font-medium text-violet-600">
-              knowledgbaseai Platform
+              knowledg-base-ai Platform
             </span>
           </div>
 

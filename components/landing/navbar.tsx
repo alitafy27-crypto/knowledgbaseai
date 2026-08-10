@@ -53,7 +53,7 @@ export default function Navbar() {
           <div>
 
             <h2 className="text-xl font-bold text-white">
-              knowledgbaseai
+              knowledg-base-ai
             </h2>
 
             <p className="text-xs text-slate-400">

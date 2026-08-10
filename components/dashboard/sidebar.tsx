@@ -19,9 +19,9 @@ export default function Sidebar() {
       <div className="flex h-[72px] items-center border-b border-gray-200 px-5">
         <Link href="/dashboard" className="flex items-center gap-3">
           {/* ✅ تم حذف الصورة المكسورة */}
-          {/* <img src="/logo.png" alt="knowledgbaseai Logo" className="h-10 w-10 object-contain" /> */}
+          {/* <img src="/logo.png" alt="knowledg-base-ai Logo" className="h-10 w-10 object-contain" /> */}
           <div>
-            <div className="text-sm font-bold text-slate-900">knowledgbaseai</div>
+            <div className="text-sm font-bold text-slate-900">knowledg-base-ai</div>
             <div className="text-[10px] text-slate-500">Knowledge Platform</div>
           </div>
         </Link>

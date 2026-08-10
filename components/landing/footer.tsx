@@ -46,7 +46,7 @@ export default function Footer() {
 
               <div>
                 <div className="text-lg font-bold tracking-tight text-white">
-                  knowledgbaseai
+                  knowledg-base-ai
                 </div>
 
                 <div className="text-xs font-medium text-slate-400">
@@ -160,7 +160,7 @@ export default function Footer() {
         <div className="mt-16 flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
 
           <p className="text-sm text-slate-500">
-            © 2026 knowledgbaseai Platform. All rights reserved.
+            © 2026 knowledg-base-ai Platform. All rights reserved.
           </p>
 
           <div className="flex flex-wrap items-center gap-6">

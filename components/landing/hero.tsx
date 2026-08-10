@@ -27,7 +27,7 @@ export default function Hero() {
 
             <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-300">
               <Sparkles size={16} />
-              Enterprise knowledgbaseai Platform
+              Enterprise knowledg-base-ai Platform
             </div>
 
             <h1 className="mt-8 text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-white">

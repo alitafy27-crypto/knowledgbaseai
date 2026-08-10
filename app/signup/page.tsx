@@ -216,7 +216,7 @@ export default function SignupPage() {
 
             <div>
               <div className="text-left text-lg font-bold tracking-tight">
-                knowledgbaseai
+                knowledg-base-ai
               </div>
 
               <div className="text-left text-xs text-slate-500">
@@ -282,7 +282,7 @@ export default function SignupPage() {
                       event.target.value,
                     )
                   }
-                  placeholder="knowledgbaseai User"
+                  placeholder="knowledg-base-ai User"
                   disabled={loading}
                   className="h-11 w-full rounded-lg border border-white/10 bg-[#070a15] pl-10 pr-4 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-violet-500/60 focus:ring-2 focus:ring-violet-500/10 disabled:cursor-not-allowed disabled:opacity-60"
                 />
