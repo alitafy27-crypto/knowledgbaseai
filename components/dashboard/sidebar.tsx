@@ -18,12 +18,8 @@ export default function Sidebar() {
       {/* Logo */}
       <div className="flex h-[72px] items-center border-b border-gray-200 px-5">
         <Link href="/dashboard" className="flex items-center gap-3">
-          {/* تم استبدال الأيقونة القديمة بالشعار الجديد */}
-          <img 
-            src="/logo.png" 
-            alt="knowledgbaseai Logo" 
-            className="h-10 w-10 object-contain" 
-          />
+          {/* ✅ تم حذف الصورة المكسورة */}
+          {/* <img src="/logo.png" alt="knowledgbaseai Logo" className="h-10 w-10 object-contain" /> */}
           <div>
             <div className="text-sm font-bold text-slate-900">knowledgbaseai</div>
             <div className="text-[10px] text-slate-500">Knowledge Platform</div>
@@ -31,7 +27,7 @@ export default function Sidebar() {
         </Link>
       </div>
 
-      {/* Navigation */}
+      {/* باقي الكود كما هو */}
       <div className="flex-1 px-3 py-6">
         <p className="mb-4 px-2 text-[9px] font-semibold uppercase tracking-[0.25em] text-slate-400">Workspace</p>
         <nav className="space-y-1">
